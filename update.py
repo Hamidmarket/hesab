@@ -9,7 +9,7 @@ ws = wb.active
 customers = {}
 
 for row in ws.iter_rows(min_row=2, values_only=True):
-    code, name, money, date = row
+    code, name, money, date, extra = row
 
     code = str(code).zfill(4)
 
