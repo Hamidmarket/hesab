@@ -13,13 +13,13 @@ body{
 }
 
 .box{
-    width:320px;
-    margin:80px auto;
-    background:white;
-    padding:25px;
-    border-radius:12px;
+    width:360px;
+    margin:50px auto;
+    background:#ffffff;
+    padding:35px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
 }
 
 input{
@@ -42,6 +42,11 @@ button{
     font-size:18px;
     font-weight:bold;
 }
+.logo{
+    width:150px;
+    display:block;
+    margin:0 auto 20px;
+}
 </style>
 
 </head>
@@ -50,7 +55,9 @@ button{
 
 <div class="box">
 
-<h2>استعلام حساب مشتری</h2>
+<img src="logo.png" class="logo">
+
+<h2>کد خود را وارد کنید</h2>
 
 <p>کد ۴ رقمی خود را وارد کنید</p>
 
@@ -61,6 +68,40 @@ button{
 <button onclick="showAccount()">مشاهده حساب</button>
 
 <div id="result"></div>
+
+</div>
+
+<hr style="margin:35px 0;">
+
+<p style="line-height:32px;color:#666;font-size:16px;">
+
+مشتری گرامی
+
+<br><br>
+
+در صورت امکان لطفاً نسبت به تسویه حساب اقدام فرمایید.
+
+<br><br>
+
+از اعتماد شما سپاسگزاریم.
+
+</p>
+
+<div style="margin-top:20px;font-size:24px;font-weight:bold;">
+
+<div id="cardNumber" onclick="copyCard()" style="cursor:pointer;font-size:24px;font-weight:bold;">
+6219861082156117
+</div>
+
+<div id="copymsg" style="color:green;margin-top:10px;"></div>
+
+<br>
+
+<span style="font-size:18px;">
+
+به نام حمیدرضا رحمتی
+
+</span>
 
 </div>
 
@@ -89,6 +130,24 @@ document.getElementById("result").innerHTML =
 document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
 
 }
+
+}
+
+</script>
+
+<script>
+
+function copyCard(){
+
+navigator.clipboard.writeText("6219861082156117");
+
+document.getElementById("copymsg").innerHTML="✅ شماره کارت کپی شد.";
+
+setTimeout(function(){
+
+document.getElementById("copymsg").innerHTML="";
+
+},2000);
 
 }
 
