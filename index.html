@@ -1,28 +1,31 @@
 ﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-<a style="color: yellow ; text-decoration: none; padding: 10px; " href="#box">مشاهده حساب</a>
-<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#card">تسویه حساب</a>
-<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#location">آدرس شعبه</a>
-<a style="color: yellow ; text-decoration: none; padding: 10px;" href="#call">تماس با من</a>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>استعلام حساب مشتری</title>
 
 <style>
 
-
+* {
+    box-sizing: border-box;
+}
 body{
     font-family:tahoma;
     background:#444242;
-    margin:100px;
+    margin:0;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .box{
-    width:360px;
+    width:100%;
+    max-width: 360px;
     margin:50px auto;
     background:#8a8888;
-    padding:35px;
+    padding:25px;
     border-radius:20px;
     text-align:center;
     box-shadow:0 10px 30px rgba(0,0,0,0.15);
@@ -30,7 +33,8 @@ body{
 }
 
 input{
-    width:90%;
+    width:100%;
+    max-width: 280px;
     padding:10px;
     font-size:18px;
     text-align:center;
@@ -57,11 +61,34 @@ button{
     display:block;
     margin:0 auto 20px;
 }
+#location{
+    text-align: center;
+}
+#location img{
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    float: none;
+    display: block;
+    margin: 20px auto;
+}
+#location p{
+    padding: 10px !important;
+    line-height: 30px;
+}
+#call a{
+    display: inline-block;
+    margin: 10px;
+}
 </style>
 
 </head>
 
 <body>
+<a style="color: yellow ; text-decoration: none; padding: 10px; " href="#box">مشاهده حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#card">تسویه حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#location">آدرس شعبه</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px;" href="#call">تماس با من</a>
 
 <div class="box" id="box">
 
