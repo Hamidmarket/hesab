@@ -66,7 +66,8 @@ for row in range(2, ws.max_row + 1):
     customers[str(code)] = {
         "name": str(name),
         "money": format_money(amount),
-        "date": str(date)
+        "date": str(date),
+        "file": str(filename)
     }
     wb.save(CUSTOMERS_FILE)
 
