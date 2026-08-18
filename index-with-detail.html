@@ -1,0 +1,388 @@
+﻿<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>استعلام حساب مشتری</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+body{
+    font-family:tahoma;
+    background:#444242;
+    margin:0;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+.box{
+    width:100%;
+    max-width: 360px;
+    margin:50px auto;
+    background:#8a8888;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    color: yellow;
+}
+
+input{
+    width:100%;
+    max-width: 280px;
+    padding:10px;
+    font-size:18px;
+    text-align:center;
+    margin-top:30px;
+    color: black;
+}
+
+button{
+    margin-top:20px;
+    padding:10px 25px;
+    font-size:18px;
+    cursor:pointer;
+}
+
+#result{
+    margin-top:25px;
+    font-size:18px;
+    font-weight:bold;
+    color: yellow;
+}
+
+.logo{
+    width:150px;
+    display:block;
+    margin:0 auto 20px;
+}
+#location{
+    text-align: center;
+}
+#location img{
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    float: none;
+    display: block;
+    margin: 20px auto;
+}
+#location p{
+    padding: 10px !important;
+    line-height: 30px;
+}
+#call a{
+    display: inline-block;
+    margin: 10px;
+}
+
+#detailBtn{
+    display:none;
+    margin:20px auto 0;
+    padding:12px 22px;
+    font-size:17px;
+    background:#ffd400;
+    color:#222;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+#detailBtn:active{transform:scale(.98);}
+#detailBox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    padding:20px;
+    overflow:auto;
+}
+#detailContent{
+    max-width:900px;
+    margin:30px auto;
+    background:#8a8888;
+    color:#fff;
+    padding:20px;
+    border-radius:15px;
+}
+#detailContent h3{color:yellow;text-align:center;}
+#detailTableWrap{overflow-x:auto;}
+#detailTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    color:#111;
+    direction:rtl;
+}
+#detailTable th,#detailTable td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+    white-space:nowrap;
+}
+#detailTable th{background:#ddd;}
+#closeDetail{
+    display:block;
+    margin:20px auto 0;
+    padding:10px 25px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+</style>
+
+</head>
+
+<body>
+<a style="color: yellow ; text-decoration: none; padding: 10px; " href="#box">مشاهده حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#card">تسویه حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#location">آدرس شعبه</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px;" href="#call">تماس با من</a>
+
+<div class="box" id="box">
+
+<img src="logo.png" class="logo">
+
+<h2>کد خود را وارد کنید</h2>
+
+<p>کد ۴ رقمی خود را وارد کنید</p>
+
+<input id="code" maxlength="4">
+
+<br>
+
+<button onclick="showAccount()">مشاهده حساب</button>
+
+<div id="result"></div>
+<button id="detailBtn" onclick="showDetails()">📋 مشاهده ریز حساب</button>
+
+</div>
+
+<hr style="margin:35px 0;">
+
+<p class="box" id="card" style="line-height:32px;color:yellow;font-size:16px;">
+
+مشتری گرامی
+
+<br><br>
+
+در صورت امکان لطفاً نسبت به تسویه حساب اقدام فرمایید.
+
+<br><br>
+
+از اعتماد شما سپاسگزاریم.
+
+</p>
+
+<div style="margin-top:20px;font-size:24px;font-weight:bold; color: yellow;">
+
+<div id="cardNumber" onclick="copyCard()" style="cursor:pointer;font-size:24px;font-weight:bold;">
+6219861082156117
+</div>
+
+<div id="copymsg" style="color:green;margin-top:10px;"></div>
+
+<br>
+
+<span style="font-size:18px; color: yellow;">
+
+به نام حمیدرضا رحمتی
+
+</span>
+<hr>
+<section   id="location"></section>
+<img style="width: 200px;height: 180px;float: left;" src="location.jpg">
+<p style="color: yellow ; padding: 40px;">
+    آدرس ما : اراک.شازند.روستای تحت محل مواد غذایی رحمتی
+</p>
+<a style="color: yellow ; text-decoration: none; font-size: 20px;" href="https://www.google.com/maps/place/%D9%85%D9%88%D8%A7%D8%AF+%D8%BA%D8%B0%D8%A7%DB%8C%DB%8C+%D8%B1%D8%AD%D9%85%D8%AA%DB%8C%E2%80%AD/data=!4m2!3m1!1s0x0:0xdd7a32926948c097?sa=X&ved=1t:2428&ictx=111">برای مسیریابی کلیک کنید</a>
+
+
+</section>
+<hr>
+<section id="call">
+    <h2> راه هاب ارتباطی </h2>
+    <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="https://t.me/hamid_reza_rhm">تلگرام</a>
+    <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="tel:09335078929"> تماس با من</a>
+</section>
+
+
+</div>
+
+
+<div id="detailBox">
+    <div id="detailContent">
+        <h3 id="detailTitle">ریز حساب</h3>
+        <div id="detailTableWrap">در حال دریافت اطلاعات...</div>
+        <button id="closeDetail" onclick="closeDetails()">بستن</button>
+    </div>
+</div>
+
+<script>
+let customers = {};
+let currentCode = "";
+
+fetch("customers.json")
+.then(response => response.json())
+.then(data => {
+    customers = data;
+});
+
+function showAccount(){
+
+    var code = document.getElementById("code").value.trim();
+    currentCode = code;
+
+    document.getElementById("detailBtn").style.display = "none";
+
+    if(customers[code]){
+
+        document.getElementById("result").innerHTML =
+        "نام: " + customers[code].name +
+        "<br><br>جمع حساب: " + customers[code].money +
+        "<br><br>تاریخ بروزرسانی: " + customers[code].date;
+
+        // فقط وقتی مشتری معتبر است، دکمه ریزحساب نمایش داده می‌شود.
+        document.getElementById("detailBtn").style.display = "block";
+
+    }else{
+
+        document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
+
+    }
+}
+
+async function showDetails(){
+
+    const code = currentCode;
+
+    if(!customers[code]){
+        return;
+    }
+
+    const filename = customers[code].file;
+
+    if(!filename){
+        document.getElementById("detailTableWrap").innerHTML =
+            "❌ فایل ریزحساب برای این مشتری ثبت نشده است.";
+        document.getElementById("detailBox").style.display = "block";
+        return;
+    }
+
+    document.getElementById("detailTitle").innerText =
+        "ریز حساب " + customers[code].name;
+
+    document.getElementById("detailTableWrap").innerHTML =
+        "⏳ در حال دریافت ریز حساب...";
+
+    document.getElementById("detailBox").style.display = "block";
+
+    try{
+
+        // اگر پوشه فایل‌های ریزحساب اسم دیگری دارد، فقط همین خط را تغییر بده.
+        const DETAILS_FOLDER = "details/";
+
+        const response = await fetch(
+            DETAILS_FOLDER + encodeURIComponent(filename)
+        );
+
+        if(!response.ok){
+            throw new Error("file not found");
+        }
+
+        const arrayBuffer = await response.arrayBuffer();
+        const workbook = XLSX.read(arrayBuffer, {type:"array"});
+
+        const sheetName = workbook.SheetNames[0];
+        const sheet = workbook.Sheets[sheetName];
+
+        const rows = XLSX.utils.sheet_to_json(sheet, {
+            header:1,
+            defval:""
+        });
+
+        if(!rows.length){
+            document.getElementById("detailTableWrap").innerHTML =
+                "❌ این فایل ریزحساب خالی است.";
+            return;
+        }
+
+        let table = '<table id="detailTable"><thead><tr>';
+
+        rows[0].forEach(cell => {
+            table += "<th>" + escapeHtml(cell) + "</th>";
+        });
+
+        table += "</tr></thead><tbody>";
+
+        for(let i = 1; i < rows.length; i++){
+
+            // ردیف کاملاً خالی نمایش داده نشود.
+            if(rows[i].every(cell => String(cell).trim() === "")){
+                continue;
+            }
+
+            table += "<tr>";
+
+            rows[0].forEach((_, index) => {
+                table += "<td>" +
+                    escapeHtml(rows[i][index] ?? "") +
+                    "</td>";
+            });
+
+            table += "</tr>";
+        }
+
+        table += "</tbody></table>";
+
+        document.getElementById("detailTableWrap").innerHTML = table;
+
+    }catch(error){
+
+        document.getElementById("detailTableWrap").innerHTML =
+            "❌ فایل ریزحساب پیدا نشد.<br><br>" +
+            "نام فایل: " + escapeHtml(filename);
+
+    }
+}
+
+function closeDetails(){
+    document.getElementById("detailBox").style.display = "none";
+}
+
+function escapeHtml(value){
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
+</script>
+
+<script>
+
+function copyCard(){
+
+navigator.clipboard.writeText("6219861082156117");
+
+document.getElementById("copymsg").innerHTML="✅ شماره کارت کپی شد.";
+
+setTimeout(function(){
+
+document.getElementById("copymsg").innerHTML="";
+
+},2000);
+
+}
+
+</script>
+
+</body>
+</html>

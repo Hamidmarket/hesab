@@ -1,33 +1,45 @@
 ﻿<!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>استعلام حساب مشتری</title>
 
 <style>
+
+* {
+    box-sizing: border-box;
+}
 body{
     font-family:tahoma;
-    background:#f2f2f2;
+    background:#444242;
     margin:0;
+    padding: 20px;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .box{
-    width:320px;
-    margin:80px auto;
-    background:white;
+    width:100%;
+    max-width: 360px;
+    margin:50px auto;
+    background:#8a8888;
     padding:25px;
-    border-radius:12px;
+    border-radius:20px;
     text-align:center;
-    box-shadow:0 0 15px rgba(0,0,0,.2);
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+    color: yellow;
 }
 
 input{
-    width:90%;
+    width:100%;
+    max-width: 280px;
     padding:10px;
     font-size:18px;
     text-align:center;
-    margin-top:15px;
+    margin-top:30px;
+    color: black;
 }
 
 button{
@@ -41,16 +53,48 @@ button{
     margin-top:25px;
     font-size:18px;
     font-weight:bold;
+    color: yellow;
+}
+
+.logo{
+    width:150px;
+    display:block;
+    margin:0 auto 20px;
+}
+#location{
+    text-align: center;
+}
+#location img{
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+    float: none;
+    display: block;
+    margin: 20px auto;
+}
+#location p{
+    padding: 10px !important;
+    line-height: 30px;
+}
+#call a{
+    display: inline-block;
+    margin: 10px;
 }
 </style>
 
 </head>
 
 <body>
+<a style="color: yellow ; text-decoration: none; padding: 10px; " href="#box">مشاهده حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#card">تسویه حساب</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px; "href="#location">آدرس شعبه</a>
+<a style="color: yellow ; text-decoration: none; padding: 10px;" href="#call">تماس با من</a>
 
-<div class="box">
+<div class="box" id="box">
 
-<h2>استعلام حساب مشتری</h2>
+<img src="logo.png" class="logo">
+
+<h2>کد خود را وارد کنید</h2>
 
 <p>کد ۴ رقمی خود را وارد کنید</p>
 
@@ -61,6 +105,57 @@ button{
 <button onclick="showAccount()">مشاهده حساب</button>
 
 <div id="result"></div>
+
+</div>
+
+<hr style="margin:35px 0;">
+
+<p class="box" id="card" style="line-height:32px;color:yellow;font-size:16px;">
+
+مشتری گرامی
+
+<br><br>
+
+در صورت امکان لطفاً نسبت به تسویه حساب اقدام فرمایید.
+
+<br><br>
+
+از اعتماد شما سپاسگزاریم.
+
+</p>
+
+<div style="margin-top:20px;font-size:24px;font-weight:bold; color: yellow;">
+
+<div id="cardNumber" onclick="copyCard()" style="cursor:pointer;font-size:24px;font-weight:bold;">
+6219861082156117
+</div>
+
+<div id="copymsg" style="color:green;margin-top:10px;"></div>
+
+<br>
+
+<span style="font-size:18px; color: yellow;">
+
+به نام حمیدرضا رحمتی
+
+</span>
+<hr>
+<section   id="location"></section>
+<img style="width: 200px;height: 180px;float: left;" src="location.jpg">
+<p style="color: yellow ; padding: 40px;">
+    آدرس ما : اراک.شازند.روستای تحت محل مواد غذایی رحمتی
+</p>
+<a style="color: yellow ; text-decoration: none; font-size: 20px;" href="https://www.google.com/maps/place/%D9%85%D9%88%D8%A7%D8%AF+%D8%BA%D8%B0%D8%A7%DB%8C%DB%8C+%D8%B1%D8%AD%D9%85%D8%AA%DB%8C%E2%80%AD/data=!4m2!3m1!1s0x0:0xdd7a32926948c097?sa=X&ved=1t:2428&ictx=111">برای مسیریابی کلیک کنید</a>
+
+
+</section>
+<hr>
+<section id="call">
+    <h2> راه هاب ارتباطی </h2>
+    <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="https://t.me/hamid_reza_rhm">تلگرام</a>
+    <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="tel:09335078929"> تماس با من</a>
+</section>
+
 
 </div>
 
@@ -89,6 +184,24 @@ document.getElementById("result").innerHTML =
 document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
 
 }
+
+}
+
+</script>
+
+<script>
+
+function copyCard(){
+
+navigator.clipboard.writeText("6219861082156117");
+
+document.getElementById("copymsg").innerHTML="✅ شماره کارت کپی شد.";
+
+setTimeout(function(){
+
+document.getElementById("copymsg").innerHTML="";
+
+},2000);
 
 }
 
