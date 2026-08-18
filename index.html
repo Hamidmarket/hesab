@@ -261,96 +261,32 @@ function showAccount(){
 
 async function showDetails(){
 
-    const code = currentCode;
+const code = currentCode;
 
-    if(!customers[code]){
-        return;
-    }
+if(!customers[code]){
+    return;
+}
 
-    const filename = customers[code].file;
+const filename = customers[code].file;
 
-    if(!filename){
-        document.getElementById("detailTableWrap").innerHTML =
-            "❌ فایل ریزحساب برای این مشتری ثبت نشده است.";
-        document.getElementById("detailBox").style.display = "block";
-        return;
-    }
+if(!filename){
+    alert("❌ فایل ریزحساب برای این مشتری ثبت نشده است.");
+    return;
+}
 
-    document.getElementById("detailTitle").innerText =
-        "ریز حساب " + customers[code].name;
+// تبدیل نام فایل Excel به PDF
+const pdfFilename = filename.replace(/\.[^/.]+$/, ".pdf");
 
-    document.getElementById("detailTableWrap").innerHTML =
-        "⏳ در حال دریافت ریز حساب...";
+const pdfPath = "Customers/" + encodeURIComponent(pdfFilename);
 
-    document.getElementById("detailBox").style.display = "block";
+// دانلود PDF
+const link = document.createElement("a");
+link.href = pdfPath;
+link.download = pdfFilename;
 
-    try{
-
-        // اگر پوشه فایل‌های ریزحساب اسم دیگری دارد، فقط همین خط را تغییر بده.
-        const DETAILS_FOLDER = "customers/";
-
-        const response = await fetch(
-            DETAILS_FOLDER + encodeURIComponent(filename)
-        );
-
-        if(!response.ok){
-            throw new Error("file not found");
-        }
-
-        const arrayBuffer = await response.arrayBuffer();
-        const workbook = XLSX.read(arrayBuffer, {type:"array"});
-
-        const sheetName = workbook.SheetNames[0];
-        const sheet = workbook.Sheets[sheetName];
-
-        const rows = XLSX.utils.sheet_to_json(sheet, {
-            header:1,
-            defval:""
-        });
-
-        if(!rows.length){
-            document.getElementById("detailTableWrap").innerHTML =
-                "❌ این فایل ریزحساب خالی است.";
-            return;
-        }
-
-        let table = '<table id="detailTable"><thead><tr>';
-
-        rows[0].forEach(cell => {
-            table += "<th>" + escapeHtml(cell) + "</th>";
-        });
-
-        table += "</tr></thead><tbody>";
-
-        for(let i = 1; i < rows.length; i++){
-
-            // ردیف کاملاً خالی نمایش داده نشود.
-            if(rows[i].every(cell => String(cell).trim() === "")){
-                continue;
-            }
-
-            table += "<tr>";
-
-            rows[0].forEach((_, index) => {
-                table += "<td>" +
-                    escapeHtml(rows[i][index] ?? "") +
-                    "</td>";
-            });
-
-            table += "</tr>";
-        }
-
-        table += "</tbody></table>";
-
-        document.getElementById("detailTableWrap").innerHTML = table;
-
-    }catch(error){
-
-        document.getElementById("detailTableWrap").innerHTML =
-            "❌ فایل ریزحساب پیدا نشد.<br><br>" +
-            "نام فایل: " + escapeHtml(filename);
-
-    }
+document.body.appendChild(link);
+link.click();
+document.body.removeChild(link);
 }
 
 function closeDetails(){
