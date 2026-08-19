@@ -274,19 +274,11 @@ if(!filename){
     return;
 }
 
-// تبدیل نام فایل Excel به PDF
 const pdfFilename = filename.replace(/\.[^/.]+$/, ".pdf");
 
-const pdfPath = "Customers/" + encodeURIComponent(pdfFilename);
+const pdfPath = "Customers/" + pdfFilename;
 
-// دانلود PDF
-const link = document.createElement("a");
-link.href = pdfPath;
-link.download = pdfFilename;
-
-document.body.appendChild(link);
-link.click();
-document.body.removeChild(link);
+window.open(pdfPath, "_blank");
 }
 
 function closeDetails(){
