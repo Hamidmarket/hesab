@@ -63,11 +63,13 @@ for row in range(2, ws.max_row + 1):
 
     ws[f"C{row}"] = amount
 
+    pdf_filename = os.path.splitext(str(filename))[0] + ".pdf"
+
     customers[str(code)] = {
         "name": str(name),
         "money": format_money(amount),
         "date": str(date),
-        "file": str(filename)
+        "file": pdf_filename
     }
     wb.save(CUSTOMERS_FILE)
 
