@@ -3,6 +3,7 @@ import json
 import os
 import subprocess
 from datetime import datetime
+import jdatetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -43,9 +44,17 @@ for row in range(2, ws.max_row + 1):
 
     if os.path.exists(customer_file):
 
-        # تاریخ و ساعت آخرین تغییر فایل مشتری
+        # تاریخ آخرین تغییر فایل مشتری
         file_time = os.path.getmtime(customer_file)
-        date = datetime.fromtimestamp(file_time).strftime("%d/%m/%Y - %H:%M")
+
+        miladi = datetime.fromtimestamp(file_time)
+
+        shamsi = jdatetime.datetime.fromgregorian(datetime=miladi)
+
+        date = shamsi.strftime("%Y/%m/%d - %H:%M")
+
+        # ذخیره تاریخ شمسی داخل customers.xlsx
+        ws[f"D{row}"] = date
 
         try:
 
