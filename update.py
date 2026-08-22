@@ -26,11 +26,11 @@ wb = load_workbook(CUSTOMERS_FILE)
 ws = wb.active
 
 customers = {}
+
 for row in range(2, ws.max_row + 1):
 
     code = ws[f"A{row}"].value
     name = ws[f"B{row}"].value
-    date = ws[f"D{row}"].value
     filename = ws[f"E{row}"].value
 
     if code is None or filename is None:
@@ -39,8 +39,13 @@ for row in range(2, ws.max_row + 1):
     customer_file = os.path.join(CUSTOMERS_FOLDER, str(filename))
 
     amount = 0
+    date = "نامشخص"
 
     if os.path.exists(customer_file):
+
+        # تاریخ و ساعت آخرین تغییر فایل مشتری
+        file_time = os.path.getmtime(customer_file)
+        date = datetime.fromtimestamp(file_time).strftime("%d/%m/%Y - %H:%M")
 
         try:
 
@@ -71,8 +76,11 @@ for row in range(2, ws.max_row + 1):
         "date": str(date),
         "file": pdf_filename
     }
-    wb.save(CUSTOMERS_FILE)
 
+wb.save(CUSTOMERS_FILE)
+
+with open(JSON_FILE, "w", encoding="utf-8") as f:
+    json.dump(customers, f, ensure_ascii=False, indent=4)
 with open(JSON_FILE, "w", encoding="utf-8") as f:
     json.dump(customers, f, ensure_ascii=False, indent=4)
 
