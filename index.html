@@ -248,7 +248,7 @@ button{
 let customers = {};
 let currentCode = "";
 
-fetch("customers.json")
+fetch("customers.json?v=" + Date.now())
 .then(response => response.json())
 .then(data => {
     customers = data;
