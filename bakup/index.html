@@ -5,11 +5,13 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>استعلام حساب مشتری</title>
+<script src="https://cdn.jsdelivr.net/npm/xlsx@0.18.5/dist/xlsx.full.min.js"></script>
 
 <style>
 
 * {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 body{
     font-family:tahoma;
@@ -80,6 +82,60 @@ button{
     display: inline-block;
     margin: 10px;
 }
+
+#detailBtn{
+    display:none;
+    margin:20px auto 0;
+    padding:12px 22px;
+    font-size:17px;
+    background:#ffd400;
+    color:#222;
+    border:none;
+    border-radius:10px;
+    font-weight:bold;
+}
+#detailBtn:active{transform:scale(.98);}
+#detailBox{
+    display:none;
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.75);
+    z-index:9999;
+    padding:20px;
+    overflow:auto;
+}
+#detailContent{
+    max-width:900px;
+    margin:30px auto;
+    background:#8a8888;
+    color:#fff;
+    padding:20px;
+    border-radius:15px;
+}
+#detailContent h3{color:yellow;text-align:center;}
+#detailTableWrap{overflow-x:auto;}
+#detailTable{
+    width:100%;
+    border-collapse:collapse;
+    background:#fff;
+    color:#111;
+    direction:rtl;
+}
+#detailTable th,#detailTable td{
+    border:1px solid #999;
+    padding:8px;
+    text-align:center;
+    white-space:nowrap;
+}
+#detailTable th{background:#ddd;}
+#closeDetail{
+    display:block;
+    margin:20px auto 0;
+    padding:10px 25px;
+    font-size:16px;
+    cursor:pointer;
+}
+
 </style>
 
 </head>
@@ -105,6 +161,7 @@ button{
 <button onclick="showAccount()">مشاهده حساب</button>
 
 <div id="result"></div>
+<button id="detailBtn" onclick="showDetails()">📋 مشاهده ریز حساب</button>
 
 </div>
 
@@ -151,7 +208,7 @@ button{
 </section>
 <hr>
 <section id="call">
-    <h2> راه هاب ارتباطی </h2>
+    <h2> راه های ارتباطی </h2>
     <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="https://t.me/hamid_reza_rhm">تلگرام</a>
     <a style="color: yellow;text-decoration: none ;padding: 20px;font-size: 15px;text-align: center;" href="tel:09335078929"> تماس با من</a>
 </section>
@@ -159,10 +216,39 @@ button{
 
 </div>
 
+
+<div id="detailBox">
+    <div id="detailContent">
+        <h3 id="detailTitle">ریز حساب</h3>
+        <div id="detailTableWrap">در حال دریافت اطلاعات...</div>
+        <button id="closeDetail" onclick="closeDetails()">بستن</button>
+    </div>
+</div>
+
+<div style="text-align: center; margin: 30px 0;">
+
+    <a href="admin/index.html"
+       style="
+       display: inline-block;
+       padding: 12px 25px;
+       background: #222;
+       color: white;
+       text-decoration: none;
+       border-radius: 8px;
+       font-size: 15px;
+       ">
+
+        🔐 ورود به پنل مدیریت
+
+    </a>
+
+</div>
+
 <script>
 let customers = {};
+let currentCode = "";
 
-fetch("customers.json")
+fetch("customers.json?v=" + Date.now())
 .then(response => response.json())
 .then(data => {
     customers = data;
@@ -170,23 +256,62 @@ fetch("customers.json")
 
 function showAccount(){
 
-var code=document.getElementById("code").value;
+    var code = document.getElementById("code").value.trim();
+    currentCode = code;
 
-if(customers[code]){
+    document.getElementById("detailBtn").style.display = "none";
 
-document.getElementById("result").innerHTML =
-"نام: " + customers[code].name +
-"<br><br>جمع حساب: " + customers[code].money +
-"<br><br>تاریخ بروزرسانی: " + customers[code].date;
+    if(customers[code]){
 
-}else{
+        document.getElementById("result").innerHTML =
+        "نام: " + customers[code].name +
+        "<br><br>جمع حساب: " + customers[code].money +
+        "<br><br>تاریخ بروزرسانی: " + customers[code].date;
 
-document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
+        // فقط وقتی مشتری معتبر است، دکمه ریزحساب نمایش داده می‌شود.
+        document.getElementById("detailBtn").style.display = "block";
 
+    }else{
+
+        document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
+
+    }
 }
 
+async function showDetails(){
+
+const code = currentCode;
+
+if(!customers[code]){
+    return;
 }
 
+const filename = customers[code].file;
+
+if(!filename){
+    alert("❌ فایل ریزحساب برای این مشتری ثبت نشده است.");
+    return;
+}
+
+const pdfFilename = filename.replace(/\.[^/.]+$/, ".pdf");
+
+const pdfPath = "customers/" + pdfFilename;
+
+window.open(pdfPath, "_blank");
+}
+
+function closeDetails(){
+    document.getElementById("detailBox").style.display = "none";
+}
+
+function escapeHtml(value){
+    return String(value)
+        .replace(/&/g, "&amp;")
+        .replace(/</g, "&lt;")
+        .replace(/>/g, "&gt;")
+        .replace(/"/g, "&quot;")
+        .replace(/'/g, "&#039;");
+}
 </script>
 
 <script>

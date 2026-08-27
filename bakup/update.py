@@ -3,6 +3,7 @@ import json
 import os
 import subprocess
 from datetime import datetime
+import jdatetime
 
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
@@ -26,11 +27,11 @@ wb = load_workbook(CUSTOMERS_FILE)
 ws = wb.active
 
 customers = {}
+
 for row in range(2, ws.max_row + 1):
 
     code = ws[f"A{row}"].value
     name = ws[f"B{row}"].value
-    date = ws[f"D{row}"].value
     filename = ws[f"E{row}"].value
 
     if code is None or filename is None:
@@ -39,8 +40,21 @@ for row in range(2, ws.max_row + 1):
     customer_file = os.path.join(CUSTOMERS_FOLDER, str(filename))
 
     amount = 0
+    date = "نامشخص"
 
     if os.path.exists(customer_file):
+
+        # تاریخ آخرین تغییر فایل مشتری
+        file_time = os.path.getmtime(customer_file)
+
+        miladi = datetime.fromtimestamp(file_time)
+
+        shamsi = jdatetime.datetime.fromgregorian(datetime=miladi)
+
+        date = shamsi.strftime("%Y/%m/%d - %H:%M")
+
+        # ذخیره تاریخ شمسی داخل customers.xlsx
+        ws[f"D{row}"] = date
 
         try:
 
@@ -63,13 +77,19 @@ for row in range(2, ws.max_row + 1):
 
     ws[f"C{row}"] = amount
 
+    pdf_filename = os.path.splitext(str(filename))[0] + ".pdf"
+
     customers[str(code)] = {
         "name": str(name),
         "money": format_money(amount),
-        "date": str(date)
+        "date": str(date),
+        "file": pdf_filename
     }
-    wb.save(CUSTOMERS_FILE)
 
+wb.save(CUSTOMERS_FILE)
+
+with open(JSON_FILE, "w", encoding="utf-8") as f:
+    json.dump(customers, f, ensure_ascii=False, indent=4)
 with open(JSON_FILE, "w", encoding="utf-8") as f:
     json.dump(customers, f, ensure_ascii=False, indent=4)
 
