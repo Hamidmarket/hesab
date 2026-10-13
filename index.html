@@ -264,10 +264,31 @@ function showAccount(){
 
     if(customers[code]){
 
-        document.getElementById("result").innerHTML =
-        "نام: " + customers[code].name +
-        "<br><br>جمع حساب: " + customers[code].money +
-        "<br><br>تاریخ بروزرسانی: " + customers[code].date;
+        const customer = customers[code];
+
+        // اطلاعات اصلی مشتری
+        let resultHtml =
+            "نام: " + escapeHtml(customer.name) +
+            "<br><br>جمع حساب: " + escapeHtml(customer.money) +
+            "<br><br>تاریخ بروزرسانی: " + escapeHtml(customer.date);
+
+        // رتبه و امتیاز، پس از اجرای نسخه جدید update.py در customers.json نمایش داده می‌شود.
+        if (customer.grade !== undefined && customer.score !== undefined) {
+            resultHtml +=
+                "<br><br>🏆 رتبه اعتباری: " + escapeHtml(customer.grade) +
+                "<br><br>🌟 وضعیت: " + escapeHtml(customer.status || "") +
+                "<br><br>⭐ امتیاز شما: " + escapeHtml(customer.score) + " از ۴۰" +
+                "<br><br>📅 آخرین پرداخت ثبت‌شده: " + escapeHtml(customer.last_payment_date || "نامشخص");
+
+            if (customer.days_since_payment !== null && customer.days_since_payment !== undefined) {
+                resultHtml += "<br><br>⏳ مدت از آخرین پرداخت: " +
+                    escapeHtml(customer.days_since_payment) + " روز";
+            }
+        } else {
+            resultHtml += "<br><br>برای نمایش رتبه، فایل اطلاعات مشتریان باید به‌روزرسانی شود.";
+        }
+
+        document.getElementById("result").innerHTML = resultHtml;
 
         // فقط وقتی مشتری معتبر است، دکمه ریزحساب نمایش داده می‌شود.
         document.getElementById("detailBtn").style.display = "block";
