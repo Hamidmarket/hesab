@@ -277,7 +277,7 @@ function showAccount(){
             resultHtml +=
                 "<br><br>🏆 رتبه اعتباری: " + escapeHtml(customer.grade) +
                 "<br><br>🌟 وضعیت: " + escapeHtml(customer.status || "") +
-                "<br><br>⭐ امتیاز شما: " + escapeHtml(customer.score) + " از ۴۰" +
+                "<br><br>⭐ امتیاز شما: " + escapeHtml(customer.score) + " از ۶۰" +
                 "<br><br>📅 آخرین پرداخت ثبت‌شده: " + escapeHtml(customer.last_payment_date || "نامشخص");
 
             if (customer.days_since_payment !== null && customer.days_since_payment !== undefined) {

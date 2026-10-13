@@ -69,9 +69,10 @@ def parse_jalali_date(value):
 def get_payment_info(customer_ws):
     """
     پرداخت‌ها از ستون C خوانده می‌شوند و تاریخ همان ردیف از ستون E.
-    فقط ردیف‌هایی در نظر گرفته می‌شوند که مبلغ پرداخت مثبت و تاریخ معتبر داشته باشند.
+    آخرین پرداخت بر اساس جدیدترین تاریخ معتبر بین ردیف‌های دارای مبلغ مثبت انتخاب می‌شود.
     """
     latest_date = None
+    latest_amount = None
 
     for row in range(1, customer_ws.max_row + 1):
         payment_amount = to_number(customer_ws.cell(row=row, column=3).value)
@@ -81,20 +82,25 @@ def get_payment_info(customer_ws):
         payment_date = parse_jalali_date(customer_ws.cell(row=row, column=5).value)
         if payment_date is not None and (latest_date is None or payment_date > latest_date):
             latest_date = payment_date
+            latest_amount = payment_amount
 
     if latest_date is None:
-        return None, None
+        return None, None, None
 
     today = jdatetime.date.fromgregorian(date=datetime.now().date())
     days_since = (today - latest_date).days
-    return latest_date, max(days_since, 0)
+    return latest_date, max(days_since, 0), latest_amount
 
 
-def calculate_score(amount, days_since_payment):
-    """امتیاز از 40: حداکثر 20 برای تاریخ پرداخت و 20 برای مانده بدهی."""
+def calculate_score(amount, days_since_payment, last_payment_amount):
+    """امتیاز از 60: تاریخ پرداخت (20) + مانده بدهی (20) + مبلغ آخرین پرداخت (20)."""
     debt = to_number(amount)
     if debt is None:
         debt = 0
+
+    payment_amount = to_number(last_payment_amount)
+    if payment_amount is None:
+        payment_amount = 0
 
     # امتیازِ فاصله از آخرین پرداخت
     if days_since_payment is None:
@@ -118,13 +124,26 @@ def calculate_score(amount, days_since_payment):
     else:
         debt_points = 0
 
-    score = payment_points + debt_points
+    # امتیازِ مبلغ آخرین پرداخت
+    if payment_amount > 3_000_000:
+        amount_points = 20
+    elif payment_amount >= 2_000_000:
+        amount_points = 10
+    elif payment_amount >= 1_000_000:
+        amount_points = 7
+    elif payment_amount > 0:
+        amount_points = 5
+    else:
+        amount_points = 0
 
-    if score >= 30:
+    score = payment_points + debt_points + amount_points
+
+    # رتبه‌بندی سخت‌گیرانه‌تر از مجموع 60 امتیاز
+    if score >= 50:
         grade, status = "A+", "مشتری نمونه"
-    elif score >= 20:
+    elif score >= 40:
         grade, status = "A", "مشتری عالی"
-    elif score >= 10:
+    elif score >= 25:
         grade, status = "B", "مشتری عادی"
     else:
         grade, status = "C", "مشتری بدحساب"
@@ -151,6 +170,7 @@ for row in range(2, ws.max_row + 1):
     date = "نامشخص"
     last_payment_date_text = "نامشخص"
     days_since_payment = None
+    last_payment_amount = None
 
     if os.path.exists(customer_file):
         # تاریخ آخرین تغییر فایل مشتری؛ این تاریخ فقط تاریخ به‌روزرسانی فایل است.
@@ -169,7 +189,7 @@ for row in range(2, ws.max_row + 1):
             if amount is None:
                 amount = 0
 
-            last_payment_date, days_since_payment = get_payment_info(customer_ws)
+            last_payment_date, days_since_payment, last_payment_amount = get_payment_info(customer_ws)
             if last_payment_date is not None:
                 last_payment_date_text = last_payment_date.strftime("%Y/%m/%d")
 
@@ -183,7 +203,7 @@ for row in range(2, ws.max_row + 1):
 
     ws[f"C{row}"] = amount
 
-    score, grade, status = calculate_score(amount, days_since_payment)
+    score, grade, status = calculate_score(amount, days_since_payment, last_payment_amount)
     pdf_filename = os.path.splitext(str(filename))[0] + ".pdf"
 
     customers[str(code)] = {
@@ -195,7 +215,8 @@ for row in range(2, ws.max_row + 1):
         "grade": grade,
         "status": status,
         "last_payment_date": last_payment_date_text,
-        "days_since_payment": days_since_payment
+        "days_since_payment": days_since_payment,
+        "last_payment_amount": last_payment_amount
     }
 
 wb.save(CUSTOMERS_FILE)
