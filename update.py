@@ -67,16 +67,15 @@ def get_balance(customer_ws):
 
 
 def grade_for(score):
-    if score >= 90:
+    if score >= 80:
         return "A+", "خوش‌حساب ممتاز"
-    if score >= 75:
-        return "A", "خوش‌حساب"
-    if score >= 55:
-        return "B", "قابل قبول"
-    if score >= 35:
-        return "C", "نیازمند احتیاط"
-    return "D", "ریسک اعتباری بالا"
-
+    if score >= 65:
+        return "A", "خوش‌ حساب"
+    if score >= 45:
+        return "B", "مشتری معمولی"
+    if score >= 25:
+        return "C", "مشتری ضعیف"
+    return "D", "مشتری بد حساب"
 
 def score_customer(customer_ws, balance, today):
     transactions = []
