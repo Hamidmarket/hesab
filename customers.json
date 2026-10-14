@@ -4,179 +4,284 @@
         "money": "2.833.000 تومان",
         "date": "1405/07/17 - 17:48",
         "file": "danial.pdf",
-        "score": 37,
-        "grade": "B",
-        "status": "مشتری عادی",
+        "score": 39,
+        "grade": "C",
+        "status": "نیازمند احتیاط",
+        "score_details": {
+            "payment_ratio": 12,
+            "balance": 5,
+            "consistency": 7,
+            "recency": 15
+        },
         "last_payment_date": "1405/07/12",
-        "days_since_payment": 9,
-        "last_payment_amount": 1000000.0
+        "days_since_payment": 10,
+        "credit_90_days": 2803000,
+        "payment_90_days": 1000000
     },
     "2243": {
         "name": "محمد حسین رحمتی",
         "money": "7.216.000 تومان",
         "date": "1405/07/19 - 18:09",
         "file": "mohammad hosein.pdf",
-        "score": 25,
-        "grade": "B",
-        "status": "مشتری عادی",
+        "score": 37,
+        "grade": "C",
+        "status": "نیازمند احتیاط",
+        "score_details": {
+            "payment_ratio": 5,
+            "balance": 5,
+            "consistency": 12,
+            "recency": 15
+        },
         "last_payment_date": "1405/07/09",
-        "days_since_payment": 12,
-        "last_payment_amount": 238000.0
+        "days_since_payment": 13,
+        "credit_90_days": 2658000,
+        "payment_90_days": 368000
     },
     "4322": {
         "name": "عباس رحمتی",
         "money": "2.730.000 تومان",
         "date": "1405/07/21 - 16:43",
         "file": "abas.pdf",
-        "score": 37,
+        "score": 74,
         "grade": "B",
-        "status": "مشتری عادی",
+        "status": "قابل قبول",
+        "score_details": {
+            "payment_ratio": 24,
+            "balance": 15,
+            "consistency": 20,
+            "recency": 15
+        },
         "last_payment_date": "1405/07/14",
-        "days_since_payment": 7,
-        "last_payment_amount": 1500000.0
+        "days_since_payment": 8,
+        "credit_90_days": 3685000,
+        "payment_90_days": 2450000
     },
     "3596": {
         "name": "محمد صالح رحمتی",
         "money": "-9.000 تومان",
         "date": "1405/07/17 - 17:44",
         "file": "mohammad saleh.pdf",
-        "score": 45,
-        "grade": "A",
-        "status": "مشتری عالی",
+        "score": 100,
+        "grade": "A+",
+        "status": "بستانکار",
+        "score_details": {
+            "payment_ratio": 40,
+            "balance": 25,
+            "consistency": 20,
+            "recency": 15
+        },
         "last_payment_date": "1405/07/13",
-        "days_since_payment": 8,
-        "last_payment_amount": 400000.0
+        "days_since_payment": 9,
+        "credit_90_days": 2200000,
+        "payment_90_days": 3001000
     },
     "9950": {
         "name": "امیر مهدی رحمتی",
         "money": "150.000 تومان",
         "date": "1405/06/22 - 09:58",
         "file": "amir mahdi.pdf",
-        "score": 25,
+        "score": 67,
         "grade": "B",
-        "status": "مشتری عادی",
+        "status": "قابل قبول",
+        "score_details": {
+            "payment_ratio": 32,
+            "balance": 20,
+            "consistency": 7,
+            "recency": 8
+        },
         "last_payment_date": "1405/06/11",
-        "days_since_payment": 41,
-        "last_payment_amount": 355000.0
+        "days_since_payment": 42,
+        "credit_90_days": 420000,
+        "payment_90_days": 355000
     },
     "2205": {
         "name": "رضا میرزائی",
         "money": "3.965.000 تومان",
         "date": "1405/07/10 - 19:20",
         "file": "reza.pdf",
-        "score": 12,
-        "grade": "C",
-        "status": "مشتری بدحساب",
+        "score": 5,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 5,
+            "consistency": 0,
+            "recency": 0
+        },
         "last_payment_date": "1405/04/19",
-        "days_since_payment": 95,
-        "last_payment_amount": 1000000.0
+        "days_since_payment": 96,
+        "credit_90_days": 490000,
+        "payment_90_days": 0
     },
     "2250": {
         "name": "محمد جواد میرزایی",
         "money": "2.363.500 تومان",
         "date": "1405/07/21 - 16:45",
         "file": "mohammad javad.pdf",
-        "score": 17,
-        "grade": "C",
-        "status": "مشتری بدحساب",
+        "score": 5,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 5,
+            "consistency": 0,
+            "recency": 0
+        },
         "last_payment_date": "1405/04/14",
-        "days_since_payment": 100,
-        "last_payment_amount": 1000000.0
+        "days_since_payment": 101,
+        "credit_90_days": 1237000,
+        "payment_90_days": 0
     },
     "6090": {
         "name": "بوفون",
         "money": "3.282.600 تومان",
         "date": "1405/07/03 - 15:20",
         "file": "bofon.pdf",
-        "score": 25,
-        "grade": "B",
-        "status": "مشتری عادی",
+        "score": 36,
+        "grade": "C",
+        "status": "نیازمند احتیاط",
+        "score_details": {
+            "payment_ratio": 12,
+            "balance": 5,
+            "consistency": 7,
+            "recency": 12
+        },
         "last_payment_date": "1405/06/27",
-        "days_since_payment": 25,
-        "last_payment_amount": 500000.0
+        "days_since_payment": 26,
+        "credit_90_days": 1884000,
+        "payment_90_days": 500000
     },
     "195": {
         "name": "علیرضا رحمتی",
         "money": "6.450.000 تومان",
         "date": "1405/04/19 - 19:43",
         "file": "alireza.pdf",
-        "score": 20,
-        "grade": "C",
-        "status": "مشتری بدحساب",
+        "score": 0,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 0,
+            "consistency": 0,
+            "recency": 0
+        },
         "last_payment_date": "1405/04/19",
-        "days_since_payment": 95,
-        "last_payment_amount": 4000000.0
+        "days_since_payment": 96,
+        "credit_90_days": 0,
+        "payment_90_days": 0
     },
     "9906": {
         "name": "امیر رضا رحمتی",
         "money": "366.000 تومان",
         "date": "1405/04/24 - 18:53",
         "file": "amir reza.pdf",
-        "score": 20,
-        "grade": "C",
-        "status": "مشتری بدحساب",
-        "last_payment_date": "نامشخص",
+        "score": 0,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 0,
+            "consistency": 0,
+            "recency": 0
+        },
+        "last_payment_date": null,
         "days_since_payment": null,
-        "last_payment_amount": null
+        "credit_90_days": 0,
+        "payment_90_days": 0
     },
     "1234": {
         "name": "مرتضی شمسی",
         "money": "2.115.000 تومان",
         "date": "1405/07/21 - 16:45",
         "file": "morteza shamsi.pdf",
-        "score": 45,
+        "score": 76,
         "grade": "A",
-        "status": "مشتری عالی",
+        "status": "خوش‌حساب",
+        "score_details": {
+            "payment_ratio": 32,
+            "balance": 20,
+            "consistency": 12,
+            "recency": 12
+        },
         "last_payment_date": "1405/07/01",
-        "days_since_payment": 20,
-        "last_payment_amount": 4790000.0
+        "days_since_payment": 21,
+        "credit_90_days": 8288000,
+        "payment_90_days": 6423000
     },
     "9159": {
         "name": "سبحان ترابی",
         "money": "1.437.000 تومان",
         "date": "1405/05/31 - 16:56",
         "file": "sobhan.pdf",
-        "score": 25,
-        "grade": "B",
-        "status": "مشتری عادی",
+        "score": 0,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 0,
+            "consistency": 0,
+            "recency": 0
+        },
         "last_payment_date": "1404/07/25",
-        "days_since_payment": 361,
-        "last_payment_amount": 500000.0
+        "days_since_payment": 362,
+        "credit_90_days": 0,
+        "payment_90_days": 0
     },
     "8106": {
         "name": "امیر حسین رحمتی",
         "money": "0 تومان",
         "date": "1405/07/17 - 15:46",
         "file": "amir hosein.pdf",
-        "score": 60,
-        "grade": "A+",
-        "status": "مشتری نمونه",
+        "score": 87,
+        "grade": "A",
+        "status": "تسویه‌شده",
+        "score_details": {
+            "payment_ratio": 40,
+            "balance": 25,
+            "consistency": 7,
+            "recency": 15
+        },
         "last_payment_date": "1405/07/12",
-        "days_since_payment": 9,
-        "last_payment_amount": 7200000.0
+        "days_since_payment": 10,
+        "credit_90_days": 2309000,
+        "payment_90_days": 7200000
     },
     "3238": {
         "name": "متین میرزائی",
         "money": "600.000 تومان",
         "date": "1405/07/19 - 16:22",
         "file": "matin.pdf",
-        "score": 40,
-        "grade": "A",
-        "status": "مشتری عالی",
+        "score": 46,
+        "grade": "C",
+        "status": "نیازمند احتیاط",
+        "score_details": {
+            "payment_ratio": 12,
+            "balance": 15,
+            "consistency": 7,
+            "recency": 12
+        },
         "last_payment_date": "1405/07/01",
-        "days_since_payment": 20,
-        "last_payment_amount": 450000.0
+        "days_since_payment": 21,
+        "credit_90_days": 1050000,
+        "payment_90_days": 450000
     },
     "3011": {
         "name": "علی رحمتی",
         "money": "1.887.000 تومان",
         "date": "1405/07/19 - 19:05",
         "file": "ali.pdf",
-        "score": 20,
-        "grade": "C",
-        "status": "مشتری بدحساب",
-        "last_payment_date": "نامشخص",
+        "score": 10,
+        "grade": "D",
+        "status": "ریسک اعتباری بالا",
+        "score_details": {
+            "payment_ratio": 0,
+            "balance": 10,
+            "consistency": 0,
+            "recency": 0
+        },
+        "last_payment_date": null,
         "days_since_payment": null,
-        "last_payment_amount": null
+        "credit_90_days": 1887000,
+        "payment_90_days": 0
     }
 }
