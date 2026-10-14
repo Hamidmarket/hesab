@@ -259,7 +259,7 @@ try:
         print("چیزی برای commit جدید وجود نداشت یا commit انجام نشد.")
     subprocess.run(["git", "pull", "--rebase", "origin", "main"], check=True)
     subprocess.run(["git", "push", "origin", "main"], check=True)
-    print("GitHub با موفقیت به‌روزرسانی شد.")
+    print("GitHub updated successfully.")
 except Exception as exc:
     print("khata dar beroz rasani github")
     print(exc)
