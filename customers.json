@@ -3,285 +3,90 @@
         "name": "دانیال ابراهیمی",
         "money": "2.833.000 تومان",
         "date": "1405/07/17 - 17:48",
-        "file": "danial.pdf",
-        "score": 39,
-        "grade": "C",
-        "status": "نیازمند احتیاط",
-        "score_details": {
-            "payment_ratio": 12,
-            "balance": 5,
-            "consistency": 7,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/12",
-        "days_since_payment": 10,
-        "credit_90_days": 2803000,
-        "payment_90_days": 1000000
+        "file": "danial.pdf"
     },
     "2243": {
         "name": "محمد حسین رحمتی",
         "money": "7.266.000 تومان",
         "date": "1405/07/22 - 17:13",
-        "file": "mohammad hosein.pdf",
-        "score": 37,
-        "grade": "C",
-        "status": "نیازمند احتیاط",
-        "score_details": {
-            "payment_ratio": 5,
-            "balance": 5,
-            "consistency": 12,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/09",
-        "days_since_payment": 13,
-        "credit_90_days": 2708000,
-        "payment_90_days": 368000
+        "file": "mohammad hosein.pdf"
     },
     "4322": {
         "name": "عباس رحمتی",
         "money": "2.730.000 تومان",
         "date": "1405/07/21 - 16:43",
-        "file": "abas.pdf",
-        "score": 74,
-        "grade": "B",
-        "status": "قابل قبول",
-        "score_details": {
-            "payment_ratio": 24,
-            "balance": 15,
-            "consistency": 20,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/14",
-        "days_since_payment": 8,
-        "credit_90_days": 3685000,
-        "payment_90_days": 2450000
+        "file": "abas.pdf"
     },
     "3596": {
         "name": "محمد صالح رحمتی",
         "money": "-9.000 تومان",
         "date": "1405/07/17 - 17:44",
-        "file": "mohammad saleh.pdf",
-        "score": 100,
-        "grade": "A+",
-        "status": "بستانکار",
-        "score_details": {
-            "payment_ratio": 40,
-            "balance": 25,
-            "consistency": 20,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/13",
-        "days_since_payment": 9,
-        "credit_90_days": 2200000,
-        "payment_90_days": 3001000
+        "file": "mohammad saleh.pdf"
     },
     "9950": {
         "name": "امیر مهدی رحمتی",
         "money": "150.000 تومان",
         "date": "1405/06/22 - 09:58",
-        "file": "amir mahdi.pdf",
-        "score": 67,
-        "grade": "B",
-        "status": "قابل قبول",
-        "score_details": {
-            "payment_ratio": 32,
-            "balance": 20,
-            "consistency": 7,
-            "recency": 8
-        },
-        "last_payment_date": "1405/06/11",
-        "days_since_payment": 42,
-        "credit_90_days": 420000,
-        "payment_90_days": 355000
+        "file": "amir mahdi.pdf"
     },
     "2205": {
         "name": "رضا میرزائی",
         "money": "3.965.000 تومان",
         "date": "1405/07/10 - 19:20",
-        "file": "reza.pdf",
-        "score": 5,
-        "grade": "D",
-        "status": "ریسک اعتباری بالا",
-        "score_details": {
-            "payment_ratio": 0,
-            "balance": 5,
-            "consistency": 0,
-            "recency": 0
-        },
-        "last_payment_date": "1405/04/19",
-        "days_since_payment": 96,
-        "credit_90_days": 490000,
-        "payment_90_days": 0
+        "file": "reza.pdf"
     },
     "2250": {
         "name": "محمد جواد میرزایی",
         "money": "2.363.500 تومان",
         "date": "1405/07/21 - 16:45",
-        "file": "mohammad javad.pdf",
-        "score": 5,
-        "grade": "D",
-        "status": "ریسک اعتباری بالا",
-        "score_details": {
-            "payment_ratio": 0,
-            "balance": 5,
-            "consistency": 0,
-            "recency": 0
-        },
-        "last_payment_date": "1405/04/14",
-        "days_since_payment": 101,
-        "credit_90_days": 1237000,
-        "payment_90_days": 0
+        "file": "mohammad javad.pdf"
     },
     "6090": {
         "name": "بوفون",
         "money": "3.282.600 تومان",
         "date": "1405/07/03 - 15:20",
-        "file": "bofon.pdf",
-        "score": 36,
-        "grade": "C",
-        "status": "نیازمند احتیاط",
-        "score_details": {
-            "payment_ratio": 12,
-            "balance": 5,
-            "consistency": 7,
-            "recency": 12
-        },
-        "last_payment_date": "1405/06/27",
-        "days_since_payment": 26,
-        "credit_90_days": 1884000,
-        "payment_90_days": 500000
+        "file": "bofon.pdf"
     },
     "195": {
         "name": "علیرضا رحمتی",
         "money": "1.450.000 تومان",
         "date": "1405/07/22 - 16:29",
-        "file": "alireza.pdf",
-        "score": 62,
-        "grade": "B",
-        "status": "قابل قبول",
-        "score_details": {
-            "payment_ratio": 40,
-            "balance": 0,
-            "consistency": 7,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/22",
-        "days_since_payment": 0,
-        "credit_90_days": 0,
-        "payment_90_days": 5000000
+        "file": "alireza.pdf"
     },
     "9906": {
         "name": "امیر رضا رحمتی",
         "money": "366.000 تومان",
         "date": "1405/04/24 - 18:53",
-        "file": "amir reza.pdf",
-        "score": 0,
-        "grade": "D",
-        "status": "ریسک اعتباری بالا",
-        "score_details": {
-            "payment_ratio": 0,
-            "balance": 0,
-            "consistency": 0,
-            "recency": 0
-        },
-        "last_payment_date": null,
-        "days_since_payment": null,
-        "credit_90_days": 0,
-        "payment_90_days": 0
+        "file": "amir reza.pdf"
     },
     "1234": {
         "name": "مرتضی شمسی",
         "money": "2.515.000 تومان",
         "date": "1405/07/22 - 18:18",
-        "file": "morteza shamsi.pdf",
-        "score": 68,
-        "grade": "B",
-        "status": "قابل قبول",
-        "score_details": {
-            "payment_ratio": 24,
-            "balance": 20,
-            "consistency": 12,
-            "recency": 12
-        },
-        "last_payment_date": "1405/07/01",
-        "days_since_payment": 21,
-        "credit_90_days": 8688000,
-        "payment_90_days": 6423000
+        "file": "morteza shamsi.pdf"
     },
     "9159": {
         "name": "سبحان ترابی",
         "money": "1.437.000 تومان",
         "date": "1405/05/31 - 16:56",
-        "file": "sobhan.pdf",
-        "score": 0,
-        "grade": "D",
-        "status": "ریسک اعتباری بالا",
-        "score_details": {
-            "payment_ratio": 0,
-            "balance": 0,
-            "consistency": 0,
-            "recency": 0
-        },
-        "last_payment_date": "1404/07/25",
-        "days_since_payment": 362,
-        "credit_90_days": 0,
-        "payment_90_days": 0
+        "file": "sobhan.pdf"
     },
     "8106": {
         "name": "امیر حسین رحمتی",
         "money": "0 تومان",
         "date": "1405/07/17 - 15:46",
-        "file": "amir hosein.pdf",
-        "score": 87,
-        "grade": "A",
-        "status": "تسویه‌شده",
-        "score_details": {
-            "payment_ratio": 40,
-            "balance": 25,
-            "consistency": 7,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/12",
-        "days_since_payment": 10,
-        "credit_90_days": 2309000,
-        "payment_90_days": 7200000
+        "file": "amir hosein.pdf"
     },
     "3238": {
         "name": "متین میرزائی",
         "money": "600.000 تومان",
         "date": "1405/07/19 - 16:22",
-        "file": "matin.pdf",
-        "score": 46,
-        "grade": "C",
-        "status": "نیازمند احتیاط",
-        "score_details": {
-            "payment_ratio": 12,
-            "balance": 15,
-            "consistency": 7,
-            "recency": 12
-        },
-        "last_payment_date": "1405/07/01",
-        "days_since_payment": 21,
-        "credit_90_days": 1050000,
-        "payment_90_days": 450000
+        "file": "matin.pdf"
     },
     "3011": {
         "name": "علی رحمتی",
         "money": "1.887.000 تومان",
         "date": "1405/07/22 - 18:14",
-        "file": "ali.pdf",
-        "score": 64,
-        "grade": "B",
-        "status": "قابل قبول",
-        "score_details": {
-            "payment_ratio": 32,
-            "balance": 10,
-            "consistency": 7,
-            "recency": 15
-        },
-        "last_payment_date": "1405/07/22",
-        "days_since_payment": 0,
-        "credit_90_days": 1887000,
-        "payment_90_days": 1800000
+        "file": "ali.pdf"
     }
 }
