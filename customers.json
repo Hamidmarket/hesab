@@ -191,21 +191,21 @@
     },
     "1234": {
         "name": "مرتضی شمسی",
-        "money": "2.115.000 تومان",
-        "date": "1405/07/21 - 16:45",
+        "money": "2.515.000 تومان",
+        "date": "1405/07/22 - 18:18",
         "file": "morteza shamsi.pdf",
-        "score": 76,
-        "grade": "A",
-        "status": "خوش‌حساب",
+        "score": 68,
+        "grade": "B",
+        "status": "قابل قبول",
         "score_details": {
-            "payment_ratio": 32,
+            "payment_ratio": 24,
             "balance": 20,
             "consistency": 12,
             "recency": 12
         },
         "last_payment_date": "1405/07/01",
         "days_since_payment": 21,
-        "credit_90_days": 8288000,
+        "credit_90_days": 8688000,
         "payment_90_days": 6423000
     },
     "9159": {
