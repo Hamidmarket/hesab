@@ -248,8 +248,8 @@ wb.save(CUSTOMERS_FILE)
 with open(JSON_FILE, "w", encoding="utf-8") as f:
     json.dump(customers, f, ensure_ascii=False, indent=4)
 
-print("customers.json ساخته شد.")
-print(f"تعداد مشتریان پردازش‌شده: {len(customers)}")
+print("customers.json created successfully.")
+print(f"Number of customers processed: {len(customers)}")
 
 msg = "Update credit score " + datetime.now().strftime("%Y-%m-%d %H:%M:%S")
 try:
@@ -261,5 +261,5 @@ try:
     subprocess.run(["git", "push", "origin", "main"], check=True)
     print("GitHub با موفقیت به‌روزرسانی شد.")
 except Exception as exc:
-    print("خطا در به‌روزرسانی GitHub:")
+    print("khata dar beroz rasani github")
     print(exc)

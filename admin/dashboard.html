@@ -95,7 +95,7 @@
         table {
             width: 100%;
             border-collapse: collapse;
-            min-width: 650px;
+            min-width: 900px;
         }
 
         th,
@@ -243,6 +243,8 @@
                                 <th>نام مشتری</th>
                                 <th>مبلغ حساب</th>
                                 <th>تاریخ</th>
+                                <th>رتبه اعتباری</th>
+                                <th>امتیاز</th>
                                 <th>ریز حساب</th>
                             </tr>
     
@@ -252,7 +254,7 @@
                         <tbody id="customerTable">
     
                             <tr>
-                                <td colspan="5">
+                                <td colspan="7">
                                     در حال دریافت اطلاعات...
                                 </td>
                             </tr>
@@ -305,7 +307,7 @@ fetch("../customers.json")
 
         document.getElementById("customerTable").innerHTML = `
             <tr>
-                <td colspan="5" class="error">
+                <td colspan="7" class="error">
                     خطا در خواندن اطلاعات مشتری‌ها
                 </td>
             </tr>
@@ -334,11 +336,15 @@ function showCustomers(data) {
 
             <td>${customer.date || "-"}</td>
 
+            <td>${customer.status || customer.grade || "سابقه ناکافی"}</td>
+
+            <td>${customer.score === null || customer.score === undefined ? "—" : Number(customer.score).toLocaleString("fa-IR") + " از ۱۰۰"}</td>
+
             <td>
                 ${
                     customer.file
-                    ? `<a href="../${customer.file}" target="_blank">نمایش</a>`
-                    : "-"
+                    ? `<a href="../customers/${encodeURIComponent(customer.file)}" target="_blank" rel="noopener">نمایش ریز حساب</a>`
+                    : "فایل موجود نیست"
                 }
             </td>
         `;
