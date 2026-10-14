@@ -268,20 +268,20 @@
     "3011": {
         "name": "علی رحمتی",
         "money": "1.887.000 تومان",
-        "date": "1405/07/19 - 19:05",
+        "date": "1405/07/22 - 18:14",
         "file": "ali.pdf",
-        "score": 10,
-        "grade": "D",
-        "status": "ریسک اعتباری بالا",
+        "score": 64,
+        "grade": "B",
+        "status": "قابل قبول",
         "score_details": {
-            "payment_ratio": 0,
+            "payment_ratio": 32,
             "balance": 10,
-            "consistency": 0,
-            "recency": 0
+            "consistency": 7,
+            "recency": 15
         },
-        "last_payment_date": null,
-        "days_since_payment": null,
+        "last_payment_date": "1405/07/22",
+        "days_since_payment": 0,
         "credit_90_days": 1887000,
-        "payment_90_days": 0
+        "payment_90_days": 1800000
     }
 }
