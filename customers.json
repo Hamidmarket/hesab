@@ -77,21 +77,21 @@
     },
     "9950": {
         "name": "امیر مهدی رحمتی",
-        "money": "339.000 تومان",
-        "date": "1405/07/24 - 16:54",
+        "money": "519.000 تومان",
+        "date": "1405/07/24 - 19:00",
         "file": "amir mahdi.pdf",
-        "score": 54,
-        "grade": "B",
-        "status": "مشتری معمولی",
+        "score": 42,
+        "grade": "C",
+        "status": "مشتری ضعیف",
         "score_details": {
-            "payment_ratio": 24,
+            "payment_ratio": 12,
             "balance": 15,
             "consistency": 7,
             "recency": 8
         },
         "last_payment_date": "1405/06/11",
         "days_since_payment": 44,
-        "credit_90_days": 609000,
+        "credit_90_days": 789000,
         "payment_90_days": 355000
     },
     "2205": {
