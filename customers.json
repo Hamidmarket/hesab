@@ -248,8 +248,8 @@
     },
     "3238": {
         "name": "متین میرزائی",
-        "money": "600.000 تومان",
-        "date": "1405/07/19 - 16:22",
+        "money": "800.000 تومان",
+        "date": "1405/07/24 - 21:11",
         "file": "matin.pdf",
         "score": 46,
         "grade": "B",
@@ -262,7 +262,7 @@
         },
         "last_payment_date": "1405/07/01",
         "days_since_payment": 23,
-        "credit_90_days": 1050000,
+        "credit_90_days": 1250000,
         "payment_90_days": 450000
     },
     "3011": {
