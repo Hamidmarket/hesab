@@ -67,11 +67,11 @@ def get_balance(customer_ws):
 
 
 def grade_for(score):
-    if score >= 80:
-        return "A+", "خوش‌حساب ممتاز"
     if score >= 65:
+        return "A+", "خوش‌حساب ممتاز"
+    if score >= 55:
         return "A", "خوش‌ حساب"
-    if score >= 45:
+    if score >= 40:
         return "B", "مشتری معمولی"
     if score >= 25:
         return "C", "مشتری ضعیف"
