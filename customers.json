@@ -14,7 +14,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/25",
-        "days_since_payment": 0,
+        "days_since_payment": 1,
         "credit_90_days": 2830000,
         "payment_90_days": 1189000
     },
@@ -33,7 +33,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/09",
-        "days_since_payment": 16,
+        "days_since_payment": 17,
         "credit_90_days": 3022000,
         "payment_90_days": 368000
     },
@@ -52,7 +52,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/25",
-        "days_since_payment": 0,
+        "days_since_payment": 1,
         "credit_90_days": 3879000,
         "payment_90_days": 2614000
     },
@@ -71,7 +71,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/13",
-        "days_since_payment": 12,
+        "days_since_payment": 13,
         "credit_90_days": 2038000,
         "payment_90_days": 3001000
     },
@@ -80,17 +80,17 @@
         "money": "519.000 تومان",
         "date": "1405/07/24 - 19:00",
         "file": "amir mahdi.pdf",
-        "score": 42,
-        "grade": "B",
-        "status": "مشتری معمولی",
+        "score": 38,
+        "grade": "C",
+        "status": "مشتری ضعیف",
         "score_details": {
             "payment_ratio": 12,
             "balance": 15,
             "consistency": 7,
-            "recency": 8
+            "recency": 4
         },
         "last_payment_date": "1405/06/11",
-        "days_since_payment": 45,
+        "days_since_payment": 46,
         "credit_90_days": 789000,
         "payment_90_days": 355000
     },
@@ -109,7 +109,7 @@
             "recency": 0
         },
         "last_payment_date": "1405/04/19",
-        "days_since_payment": 99,
+        "days_since_payment": 100,
         "credit_90_days": 490000,
         "payment_90_days": 0
     },
@@ -128,7 +128,7 @@
             "recency": 0
         },
         "last_payment_date": "1405/04/14",
-        "days_since_payment": 104,
+        "days_since_payment": 105,
         "credit_90_days": 1426000,
         "payment_90_days": 0
     },
@@ -147,7 +147,7 @@
             "recency": 12
         },
         "last_payment_date": "1405/06/27",
-        "days_since_payment": 29,
+        "days_since_payment": 30,
         "credit_90_days": 1628000,
         "payment_90_days": 500000
     },
@@ -166,7 +166,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 3,
+        "days_since_payment": 4,
         "credit_90_days": 0,
         "payment_90_days": 5000000
     },
@@ -204,7 +204,7 @@
             "recency": 12
         },
         "last_payment_date": "1405/07/01",
-        "days_since_payment": 24,
+        "days_since_payment": 25,
         "credit_90_days": 8878000,
         "payment_90_days": 6423000
     },
@@ -223,7 +223,7 @@
             "recency": 0
         },
         "last_payment_date": "1404/07/25",
-        "days_since_payment": 365,
+        "days_since_payment": 366,
         "credit_90_days": 0,
         "payment_90_days": 0
     },
@@ -242,14 +242,14 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/12",
-        "days_since_payment": 13,
+        "days_since_payment": 14,
         "credit_90_days": 2309000,
         "payment_90_days": 7200000
     },
     "3238": {
         "name": "متین میرزائی",
-        "money": "800.000 تومان",
-        "date": "1405/07/24 - 21:11",
+        "money": "927.000 تومان",
+        "date": "1405/07/26 - 18:51",
         "file": "matin.pdf",
         "score": 46,
         "grade": "B",
@@ -261,8 +261,8 @@
             "recency": 12
         },
         "last_payment_date": "1405/07/01",
-        "days_since_payment": 24,
-        "credit_90_days": 1250000,
+        "days_since_payment": 25,
+        "credit_90_days": 1377000,
         "payment_90_days": 450000
     },
     "3011": {
@@ -280,7 +280,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 3,
+        "days_since_payment": 4,
         "credit_90_days": 2247000,
         "payment_90_days": 1800000
     }
