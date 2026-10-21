@@ -58,8 +58,8 @@
     },
     "3596": {
         "name": "محمد صالح رحمتی",
-        "money": "-9.000 تومان",
-        "date": "1405/07/17 - 17:44",
+        "money": "-549.000 تومان",
+        "date": "1405/07/29 - 19:37",
         "file": "mohammad saleh.pdf",
         "score": 100,
         "grade": "A+",
@@ -70,10 +70,10 @@
             "consistency": 20,
             "recency": 15
         },
-        "last_payment_date": "1405/07/13",
-        "days_since_payment": 16,
+        "last_payment_date": "1405/07/29",
+        "days_since_payment": 0,
         "credit_90_days": 2038000,
-        "payment_90_days": 2644000
+        "payment_90_days": 3184000
     },
     "9950": {
         "name": "امیر مهدی رحمتی",
