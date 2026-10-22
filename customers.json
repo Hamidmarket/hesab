@@ -1,22 +1,22 @@
 {
     "1786": {
         "name": "دانیال ابراهیمی",
-        "money": "3.103.000 تومان",
-        "date": "1405/07/29 - 18:19",
+        "money": "2.103.000 تومان",
+        "date": "1405/07/30 - 21:05",
         "file": "danial.pdf",
-        "score": 44,
-        "grade": "B",
-        "status": "مشتری معمولی",
+        "score": 70,
+        "grade": "A+",
+        "status": "خوش‌حساب ممتاز",
         "score_details": {
-            "payment_ratio": 12,
-            "balance": 5,
-            "consistency": 12,
+            "payment_ratio": 24,
+            "balance": 15,
+            "consistency": 16,
             "recency": 15
         },
-        "last_payment_date": "1405/07/25",
-        "days_since_payment": 5,
+        "last_payment_date": "1405/07/30",
+        "days_since_payment": 0,
         "credit_90_days": 3100000,
-        "payment_90_days": 1189000
+        "payment_90_days": 2189000
     },
     "2243": {
         "name": "محمد حسین رحمتی",
