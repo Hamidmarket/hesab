@@ -1,8 +1,8 @@
 {
     "1786": {
         "name": "دانیال ابراهیمی",
-        "money": "2.238.000 تومان",
-        "date": "1405/08/05 - 19:12",
+        "money": "2.363.000 تومان",
+        "date": "1405/08/07 - 21:27",
         "file": "danial.pdf",
         "score": 70,
         "grade": "A+",
@@ -15,13 +15,13 @@
         },
         "last_payment_date": "1405/07/30",
         "days_since_payment": 7,
-        "credit_90_days": 3235000,
+        "credit_90_days": 3360000,
         "payment_90_days": 2189000
     },
     "2243": {
         "name": "محمد حسین رحمتی",
-        "money": "5.165.000 تومان",
-        "date": "1405/08/05 - 19:22",
+        "money": "5.290.000 تومان",
+        "date": "1405/08/07 - 21:28",
         "file": "mohammad hosein.pdf",
         "score": 64,
         "grade": "A",
@@ -34,13 +34,13 @@
         },
         "last_payment_date": "1405/07/30",
         "days_since_payment": 7,
-        "credit_90_days": 3397000,
+        "credit_90_days": 3522000,
         "payment_90_days": 3238000
     },
     "4322": {
         "name": "عباس رحمتی",
-        "money": "3.250.000 تومان",
-        "date": "1405/08/05 - 19:11",
+        "money": "3.510.000 تومان",
+        "date": "1405/08/07 - 21:25",
         "file": "abas.pdf",
         "score": 69,
         "grade": "A+",
@@ -53,7 +53,7 @@
         },
         "last_payment_date": "1405/07/25",
         "days_since_payment": 12,
-        "credit_90_days": 4069000,
+        "credit_90_days": 4329000,
         "payment_90_days": 2244000
     },
     "3596": {
@@ -77,21 +77,21 @@
     },
     "9950": {
         "name": "امیر مهدی رحمتی",
-        "money": "0 تومان",
-        "date": "1405/07/29 - 19:17",
+        "money": "125.000 تومان",
+        "date": "1405/08/07 - 21:26",
         "file": "amir mahdi.pdf",
-        "score": 92,
+        "score": 84,
         "grade": "A+",
-        "status": "تسویه‌شده",
+        "status": "خوش‌حساب ممتاز",
         "score_details": {
-            "payment_ratio": 40,
+            "payment_ratio": 32,
             "balance": 25,
             "consistency": 12,
             "recency": 15
         },
         "last_payment_date": "1405/07/29",
         "days_since_payment": 8,
-        "credit_90_days": 789000,
+        "credit_90_days": 914000,
         "payment_90_days": 874000
     },
     "2205": {
