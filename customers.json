@@ -134,8 +134,8 @@
     },
     "6090": {
         "name": "بوفون",
-        "money": "1.672.600 تومان",
-        "date": "1405/08/08 - 13:35",
+        "money": "1.872.600 تومان",
+        "date": "1405/08/08 - 19:27",
         "file": "bofon.pdf",
         "score": 77,
         "grade": "A+",
@@ -148,7 +148,7 @@
         },
         "last_payment_date": "1405/08/07",
         "days_since_payment": 1,
-        "credit_90_days": 1958000,
+        "credit_90_days": 2158000,
         "payment_90_days": 2500000
     },
     "195": {
