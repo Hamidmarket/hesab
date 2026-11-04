@@ -356,5 +356,92 @@ document.getElementById("copymsg").innerHTML="";
 
 </script>
 
+<!-- اطلاعیه حمید مارکت -->
+<div id="noticePopup">
+    <div class="notice-box">
+  
+      <span class="close-notice" onclick="closeNotice()">×</span>
+  
+      <h2>📢 اطلاعیه مهم حمید مارکت</h2>
+  
+      <p>مشتری گرامی،</p>
+  
+      <p>
+        به اطلاع می‌رسانیم در راستای یکپارچه‌سازی سیستم حسابداری فروشگاه،
+        سامانه فعلی مشاهده و پیگیری حساب مشتریان به‌زودی غیرفعال خواهد شد.
+      </p>
+  
+      <p>
+        تمامی حساب ها در نرم افزار هلو ذخیره میشوند و دیگر از این سایت قابل مشاهده نیست .
+      </p>
+      
+      این سایت تا نهایت 10 روز دیگر از دسترس خارج میشود
+ 
+      </p>
+  
+      <p>از اعتماد و همراهی شما سپاسگزاریم ❤️</p>
+  
+      <strong>مدیریت حمید مارکت</strong>
+  
+    </div>
+  </div>
+  
+  <style>
+  #noticePopup {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    direction: rtl;
+    padding: 15px;
+  }
+  
+  .notice-box {
+    background: white;
+    width: 100%;
+    max-width: 430px;
+    padding: 30px 22px;
+    border-radius: 18px;
+    text-align: center;
+    position: relative;
+    font-family: Tahoma, sans-serif;
+    line-height: 2;
+    box-sizing: border-box;
+  }
+  
+  .notice-box h2 {
+    color: #d62828;
+    font-size: 19px;
+    margin-top: 10px;
+  }
+  
+  .notice-box p {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .notice-box strong {
+    color: #222;
+  }
+  
+  .close-notice {
+    position: absolute;
+    top: 5px;
+    left: 15px;
+    font-size: 32px;
+    color: red;
+    cursor: pointer;
+  }
+  </style>
+  
+  <script>
+  function closeNotice() {
+    document.getElementById("noticePopup").style.display = "none";
+  }
+  </script>
+
 </body>
 </html>
