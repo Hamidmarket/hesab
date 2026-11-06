@@ -14,7 +14,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/11",
-        "days_since_payment": 2,
+        "days_since_payment": 4,
         "credit_90_days": 2495000,
         "payment_90_days": 2381000
     },
@@ -33,7 +33,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/30",
-        "days_since_payment": 13,
+        "days_since_payment": 15,
         "credit_90_days": 3145000,
         "payment_90_days": 3238000
     },
@@ -42,17 +42,17 @@
         "money": "3.714.000 تومان",
         "date": "1405/08/12 - 19:30",
         "file": "abas.pdf",
-        "score": 53,
+        "score": 50,
         "grade": "B",
         "status": "مشتری معمولی",
         "score_details": {
             "payment_ratio": 12,
             "balance": 10,
             "consistency": 16,
-            "recency": 15
+            "recency": 12
         },
         "last_payment_date": "1405/07/25",
-        "days_since_payment": 18,
+        "days_since_payment": 20,
         "credit_90_days": 4062000,
         "payment_90_days": 1744000
     },
@@ -71,7 +71,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/12",
-        "days_since_payment": 1,
+        "days_since_payment": 3,
         "credit_90_days": 2072000,
         "payment_90_days": 3026000
     },
@@ -90,7 +90,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/29",
-        "days_since_payment": 14,
+        "days_since_payment": 16,
         "credit_90_days": 914000,
         "payment_90_days": 874000
     },
@@ -109,27 +109,27 @@
             "recency": 0
         },
         "last_payment_date": "1405/04/19",
-        "days_since_payment": 117,
+        "days_since_payment": 119,
         "credit_90_days": 990000,
         "payment_90_days": 0
     },
     "2250": {
         "name": "محمد جواد میرزایی",
-        "money": "1.092.500 تومان",
-        "date": "1405/08/13 - 19:14",
+        "money": "1.392.500 تومان",
+        "date": "1405/08/15 - 17:51",
         "file": "mohammad javad.pdf",
-        "score": 82,
+        "score": 77,
         "grade": "A+",
         "status": "خوش‌حساب ممتاز",
         "score_details": {
             "payment_ratio": 40,
-            "balance": 15,
+            "balance": 10,
             "consistency": 12,
             "recency": 15
         },
         "last_payment_date": "1405/08/09",
-        "days_since_payment": 4,
-        "credit_90_days": 1526000,
+        "days_since_payment": 6,
+        "credit_90_days": 1826000,
         "payment_90_days": 1940000
     },
     "6090": {
@@ -147,7 +147,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/07",
-        "days_since_payment": 6,
+        "days_since_payment": 8,
         "credit_90_days": 2648000,
         "payment_90_days": 2500000
     },
@@ -166,7 +166,7 @@
             "recency": 12
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 21,
+        "days_since_payment": 23,
         "credit_90_days": 0,
         "payment_90_days": 5000000
     },
@@ -204,7 +204,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/27",
-        "days_since_payment": 16,
+        "days_since_payment": 18,
         "credit_90_days": 9900000,
         "payment_90_days": 7423000
     },
@@ -223,7 +223,7 @@
             "recency": 0
         },
         "last_payment_date": "1404/07/25",
-        "days_since_payment": 383,
+        "days_since_payment": 385,
         "credit_90_days": 0,
         "payment_90_days": 0
     },
@@ -242,7 +242,7 @@
             "recency": 8
         },
         "last_payment_date": "1405/07/12",
-        "days_since_payment": 31,
+        "days_since_payment": 33,
         "credit_90_days": 2826000,
         "payment_90_days": 7200000
     },
@@ -261,7 +261,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/07/30",
-        "days_since_payment": 13,
+        "days_since_payment": 15,
         "credit_90_days": 1377000,
         "payment_90_days": 1380000
     },
@@ -280,7 +280,7 @@
             "recency": 12
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 21,
+        "days_since_payment": 23,
         "credit_90_days": 5107000,
         "payment_90_days": 1800000
     }
