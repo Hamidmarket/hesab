@@ -267,8 +267,8 @@
     },
     "3011": {
         "name": "علی رحمتی",
-        "money": "4.037.000 تومان",
-        "date": "1405/08/15 - 19:31",
+        "money": "4.602.000 تومان",
+        "date": "1405/08/18 - 17:50",
         "file": "ali.pdf",
         "score": 46,
         "grade": "B",
@@ -281,7 +281,7 @@
         },
         "last_payment_date": "1405/07/22",
         "days_since_payment": 26,
-        "credit_90_days": 5837000,
+        "credit_90_days": 6402000,
         "payment_90_days": 1800000
     }
 }
