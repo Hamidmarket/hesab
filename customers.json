@@ -14,7 +14,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/11",
-        "days_since_payment": 15,
+        "days_since_payment": 18,
         "credit_90_days": 2603000,
         "payment_90_days": 2381000
     },
@@ -33,7 +33,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/21",
-        "days_since_payment": 5,
+        "days_since_payment": 8,
         "credit_90_days": 3653000,
         "payment_90_days": 3388000
     },
@@ -52,7 +52,7 @@
             "recency": 8
         },
         "last_payment_date": "1405/07/25",
-        "days_since_payment": 31,
+        "days_since_payment": 34,
         "credit_90_days": 5240000,
         "payment_90_days": 1744000
     },
@@ -71,7 +71,7 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/12",
-        "days_since_payment": 14,
+        "days_since_payment": 17,
         "credit_90_days": 1766000,
         "payment_90_days": 2426000
     },
@@ -90,28 +90,28 @@
             "recency": 12
         },
         "last_payment_date": "1405/07/29",
-        "days_since_payment": 27,
+        "days_since_payment": 30,
         "credit_90_days": 914000,
         "payment_90_days": 874000
     },
     "2205": {
         "name": "رضا میرزائی",
-        "money": "4.595.000 تومان",
-        "date": "1405/08/24 - 20:05",
+        "money": "4.465.000 تومان",
+        "date": "1405/08/29 - 19:27",
         "file": "reza.pdf",
-        "score": 5,
-        "grade": "D",
-        "status": "مشتری بد حساب",
+        "score": 32,
+        "grade": "C",
+        "status": "مشتری ضعیف",
         "score_details": {
-            "payment_ratio": 0,
+            "payment_ratio": 5,
             "balance": 5,
-            "consistency": 0,
-            "recency": 0
+            "consistency": 7,
+            "recency": 15
         },
-        "last_payment_date": "1405/04/19",
-        "days_since_payment": 130,
+        "last_payment_date": "1405/08/29",
+        "days_since_payment": 0,
         "credit_90_days": 1120000,
-        "payment_90_days": 0
+        "payment_90_days": 130000
     },
     "2250": {
         "name": "محمد جواد میرزایی",
@@ -128,8 +128,8 @@
             "recency": 15
         },
         "last_payment_date": "1405/08/22",
-        "days_since_payment": 4,
-        "credit_90_days": 2704000,
+        "days_since_payment": 7,
+        "credit_90_days": 2484000,
         "payment_90_days": 2397000
     },
     "6090": {
@@ -137,18 +137,18 @@
         "money": "2.652.600 تومان",
         "date": "1405/08/17 - 18:53",
         "file": "bofon.pdf",
-        "score": 72,
+        "score": 69,
         "grade": "A+",
         "status": "خوش‌حساب ممتاز",
         "score_details": {
             "payment_ratio": 40,
             "balance": 5,
             "consistency": 12,
-            "recency": 15
+            "recency": 12
         },
         "last_payment_date": "1405/08/07",
-        "days_since_payment": 19,
-        "credit_90_days": 2488000,
+        "days_since_payment": 22,
+        "credit_90_days": 2278000,
         "payment_90_days": 2500000
     },
     "195": {
@@ -166,7 +166,7 @@
             "recency": 8
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 34,
+        "days_since_payment": 37,
         "credit_90_days": 0,
         "payment_90_days": 5000000
     },
@@ -194,17 +194,17 @@
         "money": "5.313.000 تومان",
         "date": "1405/08/19 - 17:24",
         "file": "morteza shamsi.pdf",
-        "score": 75,
+        "score": 71,
         "grade": "A+",
         "status": "خوش‌حساب ممتاز",
         "score_details": {
             "payment_ratio": 32,
             "balance": 15,
             "consistency": 16,
-            "recency": 12
+            "recency": 8
         },
         "last_payment_date": "1405/07/27",
-        "days_since_payment": 29,
+        "days_since_payment": 32,
         "credit_90_days": 9713000,
         "payment_90_days": 7423000
     },
@@ -223,7 +223,7 @@
             "recency": 0
         },
         "last_payment_date": "1404/07/25",
-        "days_since_payment": 396,
+        "days_since_payment": 399,
         "credit_90_days": 0,
         "payment_90_days": 0
     },
@@ -232,38 +232,38 @@
         "money": "517.000 تومان",
         "date": "1405/08/13 - 19:48",
         "file": "amir hosein.pdf",
-        "score": 80,
+        "score": 76,
         "grade": "A+",
         "status": "خوش‌حساب ممتاز",
         "score_details": {
             "payment_ratio": 40,
             "balance": 25,
             "consistency": 7,
-            "recency": 8
+            "recency": 4
         },
         "last_payment_date": "1405/07/12",
-        "days_since_payment": 44,
+        "days_since_payment": 47,
         "credit_90_days": 2826000,
         "payment_90_days": 7200000
     },
     "3238": {
         "name": "متین میرزائی",
-        "money": "497.000 تومان",
-        "date": "1405/08/22 - 19:38",
+        "money": "0 تومان",
+        "date": "1405/08/29 - 19:26",
         "file": "matin.pdf",
-        "score": 68,
+        "score": 96,
         "grade": "A+",
-        "status": "خوش‌حساب ممتاز",
+        "status": "تسویه‌شده",
         "score_details": {
-            "payment_ratio": 24,
-            "balance": 20,
-            "consistency": 12,
-            "recency": 12
+            "payment_ratio": 40,
+            "balance": 25,
+            "consistency": 16,
+            "recency": 15
         },
-        "last_payment_date": "1405/07/30",
-        "days_since_payment": 26,
+        "last_payment_date": "1405/08/29",
+        "days_since_payment": 0,
         "credit_90_days": 1877000,
-        "payment_90_days": 1380000
+        "payment_90_days": 1877000
     },
     "3011": {
         "name": "علی رحمتی",
@@ -280,7 +280,7 @@
             "recency": 8
         },
         "last_payment_date": "1405/07/22",
-        "days_since_payment": 34,
+        "days_since_payment": 37,
         "credit_90_days": 6402000,
         "payment_90_days": 1800000
     }
