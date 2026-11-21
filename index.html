@@ -266,62 +266,36 @@ function showAccount(){
 
         const customer = customers[code];
 
-        // اطلاعات اصلی مشتری
         let resultHtml =
             "نام: " + escapeHtml(customer.name) +
             "<br><br>جمع حساب: " + escapeHtml(customer.money) +
-            "<br><br>تاریخ بروزرسانی: " + escapeHtml(customer.date);
-
-        // رتبه و امتیاز، پس از اجرای نسخه جدید update.py در customers.json نمایش داده می‌شود.
-        if (customer.grade !== undefined && customer.score !== undefined) {
-            resultHtml +=
-                "<br><br>🏆 رتبه اعتباری: " + escapeHtml(customer.grade) +
-                "<br><br>🌟 وضعیت: " + escapeHtml(customer.status || "") +
-                "<br><br>⭐ امتیاز اعتباری: " + escapeHtml(customer.score === null ? "هنوز قابل ارزیابی نیست" : customer.score + " از ۱۰۰") +
-                "<br><br>📅 آخرین پرداخت ثبت‌شده: " + escapeHtml(customer.last_payment_date || "ثبت نشده") +
-                "<br><br>🛒 مجموع نسیه در ۳ ماه اخیر: " + escapeHtml(customer.credit_90_days === undefined ? "نامشخص" : Number(customer.credit_90_days).toLocaleString("fa-IR") + " تومان") +
-                "<br><br>💵 مجموع پرداخت در ۳ ماه اخیر: " + escapeHtml(customer.payment_90_days === undefined ? "نامشخص" : Number(customer.payment_90_days).toLocaleString("fa-IR") + " تومان");
-
-            if (customer.days_since_payment !== null && customer.days_since_payment !== undefined) {
-                resultHtml += "<br><br>⏳ مدت از آخرین پرداخت: " +
-                    escapeHtml(customer.days_since_payment) + " روز";
-            }
-        } else {
-            resultHtml += "<br><br>اطلاعات اعتبارسنجی هنوز در دسترس نیست؛ اطلاعات مشتریان را به‌روزرسانی کنید.";
-        }
+            "<br><br>تاریخ به‌روزرسانی حساب: " + escapeHtml(customer.date);
 
         document.getElementById("result").innerHTML = resultHtml;
 
-        // فقط وقتی مشتری معتبر است، دکمه ریزحساب نمایش داده می‌شود.
-        document.getElementById("detailBtn").style.display = "block";
+        if(customer.file){
+            document.getElementById("detailBtn").style.display = "block";
+        }
 
     }else{
-
         document.getElementById("result").innerHTML="❌ کد وارد شده صحیح نیست.";
-
     }
 }
 
-async function showDetails(){
+function showDetails(){
 
-const code = currentCode;
+    const code = currentCode;
+    if(!customers[code] || !customers[code].file){
+        alert("ریزحساب این مشتری هنوز در سامانه ثبت نشده است.");
+        return;
+    }
 
-if(!customers[code]){
-    return;
-}
+    const pdfPath = "customers/" + encodeURIComponent(customers[code].file) + "?v=" + Date.now();
+    const pdfWindow = window.open(pdfPath, "_blank");
 
-const filename = customers[code].file;
-
-if(!filename){
-    alert("❌ فایل ریزحساب برای این مشتری ثبت نشده است.");
-    return;
-}
-
-const pdfFilename = filename.replace(/\.[^/.]+$/, ".pdf");
-
-const pdfPath = "customers/" + pdfFilename;
-
-window.open(pdfPath, "_blank");
+    if(!pdfWindow){
+        alert("برای مشاهده ریزحساب، باز شدن پنجره جدید را در مرورگر مجاز کنید.");
+    }
 }
 
 function closeDetails(){
