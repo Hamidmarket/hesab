@@ -1,10 +1,10 @@
 {
     "1234": {
         "name": "مرتضی شمسی",
-        "money": "1.567.000 تومان",
+        "money": "1.567.000 toman",
         "date": "1405/08/30",
         "last_invoice_number": "61222",
-        "last_invoice_amount": "287.000 تومان",
+        "last_invoice_amount": "287.000 toman",
         "file": null
     }
 }
