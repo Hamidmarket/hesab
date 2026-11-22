@@ -284,8 +284,14 @@ fetch("customers.json?v=" + Date.now())
     result.textContent = "در دریافت اطلاعات سامانه مشکلی پیش آمده است. لطفاً کمی بعد دوباره تلاش کنید.";
 });
 
+function normalizeDigits(value){
+    return String(value || "").replace(/[۰-۹٠-٩]/g, function(digit){
+        return String("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩".indexOf(digit) % 10);
+    }).replace(/[^0-9]/g, "");
+}
+
 function showAccount(){
-    const code = document.getElementById("code").value.trim();
+    const code = normalizeDigits(document.getElementById("code").value);
     currentCode = code;
     const result = document.getElementById("result");
     const detailBtn = document.getElementById("detailBtn");
@@ -358,6 +364,15 @@ function fallbackCopy(value, message){
     }
     document.body.removeChild(field);
 }
+
+document.getElementById("code").addEventListener("input", function(){
+    const input = this;
+    const cursor = input.selectionStart;
+    input.value = input.value.replace(/[۰-۹٠-٩]/g, function(digit){
+        return String("۰۱۲۳۴۵۶۷۸۹٠١٢٣٤٥٦٧٨٩".indexOf(digit) % 10);
+    }).replace(/[^0-9]/g, "").slice(0, 4);
+    try { input.setSelectionRange(cursor, cursor); } catch(e) {}
+});
 
 document.getElementById("code").addEventListener("keydown", function(event){
     if(event.key === "Enter") showAccount();
